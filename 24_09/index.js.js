@@ -16,11 +16,11 @@ function askAge(name, surname) {
 
         u_age = age; 
 
-        age = Number(age); //upewniamy si?, ?e na pewno wiek to liczba
+        age = Number(age); //upewniamy sie, ze na pewno wiek to liczba
 
         if (age < 0 || age > 100 || isNaN(age)) {
             console.log("Prosimy o podanie faktycznego wieku");
-            askAge(name, surname); //generalnie, ?eby spyta? ponownie to si? robi rekurencje a nie p?tle apparently
+            askAge(name, surname); //generalnie, zeby spytal ponownie to sie robi rekurencje a nie petle apparently
 
         } else {
             if (age < 18) {
@@ -46,7 +46,7 @@ function askEvenOdd(age) {
 
         } else if (num % 2 == 0) {
             console.log("parzysta.");
-            rl.close();//dopóki nie zamkniejsz tutaj readline, program dalej czeka na dane
+            rl.close();//dopÃ³ki nie zamkniejsz tutaj readline, program dalej czeka na dane
 
         } else {
             console.log("nieparzysta.");
@@ -70,6 +70,7 @@ rl.question("Podaj swoje imie: ", (name) => {
 
     });
 });
+
 
 
 
