@@ -1,0 +1,131 @@
+
+*{
+  margin: 0;
+  font-family: system-ui;
+  height: 100%;
+
+  .hero {
+    background-image: url('../styles/images/lokum_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+
+nav{
+  width: 100%;
+  height: 5rem;
+  background-color: #591830;
+  color: #F2DFEB;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2.5rem;
+  align-content: space-evenly;
+
+
+  a{
+    text-decoration: none;
+    color: #F2DFEB;
+    margin: 10px;
+
+  }
+
+  a:hover{
+    text-shadow: 1px 1px 5px white;
+    transition: 0.4s;
+  }
+
+}
+
+ #homepage_img_background{
+   width: 100%;
+   background-image: url('../styles/images/lokum.jpg');
+   background-size: cover;
+   background-position: center;
+   height: 15rem;
+   display: flex;
+   justify-content: center;
+   border-bottom: #F2DFEB solid 3rem;
+
+   h1{
+
+     width: 80%;
+     color: #F2DFEB;
+     display: flex;
+     justify-content: center;
+     background-color: #BF789F;
+     height: 10rem;
+     font-size: 5rem;
+     align-items: center;
+     align-self: center;
+     border-radius: 15px;
+     border: #F2DFEB 0.5rem dotted;
+
+   }
+
+ }
+
+  #homepage_content{
+
+    width: 100%;
+    flex-wrap: wrap;
+
+    .homepage_content_element{
+      width: 40%;
+      height: 8rem;
+      border: 0.3rem solid #BF3636;
+      font-weight: bold;
+      background-color: #F2DFEB;
+      margin: 1.5rem;
+
+      .post_title{
+        font-size: 2rem;
+        color: #BF3636;
+        text-align: center;
+        padding: 0.5rem;
+
+      }
+
+      .post_image{
+        width: 100%;
+        height: auto;
+      }
+
+      .content_text{
+        font-size: 1rem;
+        text-align: center;
+        color: #591830;
+
+      }
+
+    }
+  }
+
+#categories_content{
+  width: 100%;
+  background-color: #F2DFEB;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+
+  .categories_content_element{
+    width: 70%;
+    background-color: #A63348;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F2DFEB;
+    font-size: 2.5rem;
+    margin: 2rem;
+
+  }
+
+
+}
+
+
+}
+
+
