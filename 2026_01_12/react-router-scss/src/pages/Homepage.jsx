@@ -8,7 +8,7 @@ export default function Home() {
         <main>
             <section>
                 <header id={"homepage_img_background"} >
-                    <h1>Candy World - Blog</h1>
+                    <h1>Candy World</h1>
                 </header>
 
                 <div id={"homepage_our_posts"}>

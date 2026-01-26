@@ -22,9 +22,7 @@ function App() {
                 <Route path="/posts" element={<PostView />} />
             </Routes>
 
-            <footer>
-                <p>000000</p>
-            </footer>
+
         </>
     )
 }

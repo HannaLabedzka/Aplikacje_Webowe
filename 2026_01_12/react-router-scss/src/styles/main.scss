@@ -28,19 +28,23 @@
     width: 100%;
     background: linear-gradient(
                     135deg,
-                    #ffd6df, #BF789F,
-                    #b82d4c, #ffd6df);
+                    $pastel-1,
+                    $pastel-2,
+                    $accent,
+                    $pastel-1);
     background-size: 500% 500%;
-    animation: gradientMove 15s ease infinite;
+    animation: gradientMove 10s ease infinite;
 
   }
 
+    nav, footer{
+      background-color: $primary-dark;
+      color: white;
+    }
 
     nav{
       width: 100%;
       height: 5rem;
-      background-color: #591830;
-      color: #F2DFEB;
       display: flex;
       justify-content: space-evenly;
       align-content: center;
@@ -54,8 +58,8 @@
         transition: 0.4s ease-in-out;
 
         &:hover{
-          text-shadow: 1px 1px 5px white;
-          font-size: 2.7rem;
+          text-shadow: 0 0 6px rgba(255,255,255,0.6);
+
         }
 
       }
@@ -63,8 +67,7 @@
 
     main{
       width: 80%;
-      margin: 2rem auto;
-      background-color: red;
+      margin: 8rem auto;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -79,20 +82,36 @@
 
 
         header{
+          position: relative;
           width: 100%;
           height: 20rem;
-          background-image: url('../styles/images/candy_4.jpg');
+          background-image: url('../styles/images/gummies_1.jpg');
           background-size: cover;
           background-position: center;
+          overflow: hidden;
+
+          &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                            to right,
+                            rgba(90, 31, 51, 0.85),
+                            rgba(90, 31, 51, 0.45),
+                            rgba(90, 31, 51, 0.1)
+            );
+
+            z-index: 1;
+          }
+
 
           h1{
+            position: relative;
+            z-index: 2;
             color: #F2DFEB;
-            text-shadow: 0 0 8px #591830, 0 0 8px #591830;
-            font-family: system-ui;
-            float: left;
-            padding-left: 10rem;
+            padding-left: 8rem;
             padding-top: 5rem;
-            font-size: 4rem;
+            font-size: 6rem;
 
           }
 
@@ -102,45 +121,47 @@
           width: 100%;
           height: 3rem;
           padding: 3rem;
-          border-top: 0.4rem solid #BF3636;
+          border-top: 0.4rem solid $accent;
           text-align: center;
           font-size: 2.5rem;
-          color: #BF3636;
+          color: $accent;
 
         }
 
         #homepage_content{
           width: 100%;
-          height: 31rem;
+          height: 35rem;
           display: flex;
           flex-direction: row;
           justify-content: space-evenly;
           padding: 3rem;
 
           .homepage_content_element{
-            width: 20%;
-            height: 20rem;
+            width: 25%;
+            height: 25rem;
             font-weight: bold;
             margin: 1.5rem;
             display: flex;
             align-items: center;
             flex-direction: column;
+            background-color: $soft-bg;
+            border-top-left-radius: 20rem;
+            border-top-right-radius: 20rem;
 
             .post_image{
               width: 15rem;
-              min-height: 15rem;
+              height: 17rem;
               border-top-left-radius: 150px;
               border-top-right-radius: 150px;
-              border: 0.2rem solid #BF3636;
-              border-bottom: 1rem solid #BF3636;
+              border: 0.2rem solid $accent;
+              border-bottom: 0.6rem solid $accent;
               object-fit: cover;
-
 
             }
 
             .post_title{
               font-size: 2rem;
-              color: #BF3636;
+              color: $accent;
               text-align: center;
               padding: 0.5rem;
 
@@ -149,7 +170,7 @@
             .content_text{
               font-size: 1rem;
               text-align: center;
-              color: #591830;
+              color: #4A2A34;
 
             }
 
@@ -162,7 +183,7 @@
         #get_more_posts_addr{
           width: 100%;
           height: 5rem;
-          background-color: #591830;
+          background-color: $accent;
           color: #F2DFEB;
           font-size: 1.5rem;
           display: flex;
@@ -183,7 +204,7 @@
             font-size: 2.5rem;
             padding-left: 15rem;
             padding-top: 5rem;
-            color: #591830;
+            color: #4A2A34
           }
 
           p{
@@ -191,6 +212,7 @@
             float: right;
             margin: 2rem;
             font-size: 1.2rem;
+            color: #4A2A34
           }
 
           img{
@@ -230,20 +252,73 @@
 
         }
 
+        #post_view_content{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          #selected_post{
+            width: 50%;
+
+            img{
+              width: 90%;
+              height: 30rem;
+              object-fit: cover;
+              margin: 2rem;
+              border: $accent 0.4rem solid;
+
+            }
+
+            h2{
+              color: #4A2A34;
+              font-size: 3rem;
+              text-align: center;
+              background-color: $soft-bg;
+              padding-top: 1rem;
+            }
+
+            p{
+              color: #4A2A34;
+              font-size: 1.5rem;
+              padding: 1.5rem;
+              background-color: $soft-bg;
+            }
+
+          }
+
+
+          #posts_list{
+            width: 50%;
+            overflow: auto;
+
+            .posts_list_element{
+
+              width: 85%;
+              height: 18rem;
+              text-align: center;
+              display: flex;
+              align-items: center;
+              justify-content: space-evenly;
+              background-color: $soft-bg;
+              margin: 2rem;
+
+              img{
+                width: 40%;
+                height: 15rem;
+                object-fit: cover;
+              }
+
+            }
+          }
+
+        }
+
+
+
 
     }
 
-    footer{
-      width: 100%;
-      height: 3rem;
-      background-color: #591830;
-      color: #F2DFEB;
-      display: flex;
-      justify-content: space-evenly;
-      align-content: center;
-      font-size: 1.5rem;
 
-    }
       /*
       #A63348
       #591830
@@ -254,6 +329,19 @@
 
 
     }
+
+
+  footer{
+    width: 100%;
+    height: 3rem;
+    background-color: $primary-dark;
+    color: $soft-bg;
+    font-size: 1.5rem;
+    text-align: center;
+
+
+
+  }
 
 
 
