@@ -21,6 +21,10 @@ function App() {
                 <Route path="/categories" element={<Categories />} />
                 <Route path="/posts" element={<PostView />} />
             </Routes>
+
+            <footer>
+                <p>000000</p>
+            </footer>
         </>
     )
 }

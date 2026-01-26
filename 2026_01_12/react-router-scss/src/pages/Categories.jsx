@@ -3,9 +3,10 @@ export default function Categories() {
 
 
         <section>
-            <div id={"homepage_img_background"} >
+            <header id={"homepage_img_background"} >
                 <h1>Categories</h1>
-            </div>
+            </header>
+
             <div id={"categories_content"} >
 
                 <div className="categories_content_element">
