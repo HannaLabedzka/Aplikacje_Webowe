@@ -1,0 +1,10 @@
+{
+  "imie": "Alicja",
+  "wiek": 17,
+  "uczen": true,
+  "jezyki": ["polski", "angielski", "hiszpanski"],
+  "szkola": {
+    "nazwa": "Liceum Ogólnokształcące",
+    "klasa": "3B"
+  }
+}
